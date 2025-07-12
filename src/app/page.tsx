@@ -287,7 +287,7 @@ function AnimatedNavLink({ href, index, text }: { href: string; index: string; t
       await navigator.clipboard.writeText(email);
       setCopiedIdx(idx);
       setTimeout(() => setCopiedIdx(null), 1200);
-    } catch (e) {}
+    } catch {}
   };
 
   // Overlay click handler
