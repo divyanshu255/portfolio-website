@@ -1,8 +1,8 @@
 "use client";
-import Link from 'next/link';
 import { FaGithub, FaYoutube } from 'react-icons/fa';
 import { SiExpo, SiReact, SiPostman, SiMongoose } from 'react-icons/si';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const imageData = [
   { src: "/project03/0103.jpg", title: "Register Screen" },
@@ -63,7 +63,13 @@ export default function Project03() {
         {/* Right: App Icon */}
         <div className="flex-1 flex justify-center items-center">
           <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-green/20 bg-navy">
-            <img src="https://img.icons8.com/?size=100&id=21746&format=png&color=000000" alt="Line Icon" title="Line App Icon" className="w-48 h-48 md:w-64 md:h-64 object-cover" />
+            <Image
+              src="https://img.icons8.com/?size=100&id=21746&format=png&color=000000"
+              alt="Line Icon"
+              title="Line App Icon"
+              width={256}
+              height={256}
+            />
           </div>
         </div>
       </div>
@@ -157,10 +163,12 @@ export default function Project03() {
                   <h4 className="mt-3 mb-2 text-lg text-center font-semibold text-lightest-slate">
                     {item.title}
                   </h4>
-                  <img
+                  <Image
                     src={item.src}
-                    className="w-full h-[45rem] rounded-lg shadow-md object-cover bg-navy"
                     alt={item.title}
+                    width={320}
+                    height={720}
+                    className="w-full h-[45rem] rounded-lg shadow-md object-cover bg-navy"
                   />
                 </div>
               ))}

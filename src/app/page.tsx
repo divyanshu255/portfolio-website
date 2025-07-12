@@ -50,11 +50,10 @@ const cardHover = "hover:scale-105 hover:shadow-2xl transition-transform duratio
 const animatedBorder = "relative before:absolute before:inset-0 before:rounded-[2.5rem] before:bg-gradient-to-tr before:from-green before:via-blue-400 before:to-purple-500 before:blur-xl before:opacity-40 before:z-0";
 
 export default function Home() {
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
   return (
     <main className={`min-h-screen flex flex-col justify-center items-start px-8 md:px-32 pt-32 bg-gradient-to-br from-navy via-dark-navy to-black font-sans ${animatedBorder} overflow-x-hidden`}>
       {/* HEADER */}
-      <header className={`w-full fixed top-0 left-0 z-50 bg-navy/80 backdrop-blur shadow-xl border-b ${dropdownOpen ? 'border-transparent' : 'border-lightest-navy'}`}>
+      <header className={`w-full fixed top-0 left-0 z-50 bg-navy/80 backdrop-blur shadow-xl border-b`}>
         <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-8 py-6">
           {/* Logo */}
           {/* <div className="flex items-center justify-start flex-shrink-0">
@@ -116,7 +115,7 @@ export default function Home() {
         <h1 className={`text-7xl md:text-8xl font-extrabold mb-4 ${gradientText} text-outline`}>Divyanshu Patel.</h1>
         <h2 className="text-5xl md:text-7xl font-bold text-slate mb-10 animate-fade-in-up">I build things for the mobile.</h2>
         <p className="max-w-2xl text-2xl md:text-3xl text-slate mb-12 animate-fade-in">
-          I’m a full stack mobile developer specializing in building cross-platform applications using <span className="font-bold text-green">React Native</span> and <span className="font-bold text-green">Expo</span>. With experience in <span className="font-bold text-green">Node.js</span>, <span className="font-bold text-green">JavaScript</span>, <span className="font-bold text-green">TypeScript</span>, and <span className="font-bold text-green">C++</span>.
+          I&apos;m a full stack mobile developer specializing in building cross-platform applications using <span className="font-bold text-green">React Native</span> and <span className="font-bold text-green">Expo</span>. With experience in <span className="font-bold text-green">Node.js</span>, <span className="font-bold text-green">JavaScript</span>, <span className="font-bold text-green">TypeScript</span>, and <span className="font-bold text-green">C++</span>.
         </p>
         <a
           href="#projects"
@@ -135,13 +134,13 @@ export default function Home() {
         <hr className="border-t border-lightest-navy mb-10" />
         <div className="text-slate text-2xl space-y-8">
           <AboutMeParagraph>
-            I’m a <Highlight>4th-year B.Tech student</Highlight> passionate about building <Highlight>mobile-first, full stack applications</Highlight>. My journey into development began when I started experimenting with simple <Highlight>React Native</Highlight> apps — and that curiosity quickly turned into a full-blown passion. Once I discovered <Highlight>Expo</Highlight>, it unlocked a whole new level of speed and flexibility in my mobile development workflow.
+            I&apos;m a <Highlight>4th-year B.Tech student</Highlight> passionate about building <Highlight>mobile-first, full stack applications</Highlight>. My journey into development began when I started experimenting with simple <Highlight>React Native</Highlight> apps — and that curiosity quickly turned into a full-blown passion. Once I discovered <Highlight>Expo</Highlight>, it unlocked a whole new level of speed and flexibility in my mobile development workflow.
           </AboutMeParagraph>
           <AboutMeParagraph>
-            Over the years, I’ve grown into a proficient <Highlight>full stack mobile developer</Highlight>, working with tools like <Highlight>React Native</Highlight>, <Highlight>Expo</Highlight>, <Highlight>Node.js</Highlight>, and <Highlight>TypeScript</Highlight>. Alongside that, I’ve been deeply engaged in <Highlight>DSA</Highlight> and <Highlight>competitive programming</Highlight> in <Highlight>C++</Highlight>, which has sharpened my problem-solving skills and taught me how to write efficient, scalable code.
+            Over the years, I&apos;ve grown into a proficient <Highlight>full stack mobile developer</Highlight>, working with tools like <Highlight>React Native</Highlight>, <Highlight>Expo</Highlight>, <Highlight>Node.js</Highlight>, and <Highlight>TypeScript</Highlight>. Alongside that, I&apos;ve been deeply engaged in <Highlight>DSA</Highlight> and <Highlight>competitive programming</Highlight> in <Highlight>C++</Highlight>, which has sharpened my problem-solving skills and taught me how to write efficient, scalable code.
           </AboutMeParagraph>
           <AboutMeParagraph>
-            I’m also a big believer in using modern tools to move faster — whether it's <Highlight>ChatGPT</Highlight>, <Highlight>Cursor</Highlight>, <Highlight>Claude</Highlight>, <Highlight>Perplexity</Highlight>, or <Highlight>Windsurf</Highlight> — I leverage AI to prototype faster, solve bugs quicker, and build smarter.
+            I&apos;m also a big believer in using modern tools to move faster — whether it&apos;s <Highlight>ChatGPT</Highlight>, <Highlight>Cursor</Highlight>, <Highlight>Claude</Highlight>, <Highlight>Perplexity</Highlight>, or <Highlight>Windsurf</Highlight> — I leverage AI to prototype faster, solve bugs quicker, and build smarter.
           </AboutMeParagraph>
         </div>
       </section>
@@ -195,7 +194,7 @@ export default function Home() {
       {/* PROJECTS */}
       <section id="projects" className="w-full max-w-7xl mt-32 ml-12 mb-40 relative z-10">
         <h2 className="flex items-center text-4xl font-bold text-lightest-slate mb-10">
-          <span className="text-green font-mono mr-4">03.</span> Some Things I’ve Built
+          <span className="text-green font-mono mr-4">03.</span> Some Things I&apos;ve Built
           <span className="flex-1 h-px bg-lightest-navy ml-4" />
         </h2>
         <hr className="border-t border-lightest-navy mb-10" />
@@ -489,7 +488,7 @@ function ProjectCard({
     <div className={`flex  md:flex-row${reverse ? '-reverse' : ''} gap-8 items-center ${glassBg} rounded-3xl p-8 shadow-2xl w-full max-w-7xl mt-12 ${cardHover}`}>
       <div className="w-full md:w-1/2 flex-shrink-0">
         <div className="rounded-2xl overflow-hidden shadow-lg border-2 border-green/20">
-          <Image src={imgSrc} alt={imgAlt} width={320} height={320} className="w-80 h-80 rounded-2xl shadow-md object-cover bg-navy transition-transform duration-300 hover:scale-105" unoptimized={imgSrc.startsWith('http')} />
+          <Image src={imgSrc} alt={imgAlt} width={320} height={320} className="w-80 h-80 rounded-2xl shadow-md object-cover bg-navy transition-transform duration-300 hover:scale-105" />
         </div>
       </div>
       <div className={`w-full md:w-1/2 flex flex-col gap-4 ${reverse ? "md:items-start text-left" : "md:items-end text-right"}`}>
