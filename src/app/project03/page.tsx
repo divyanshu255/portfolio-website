@@ -64,7 +64,8 @@ export default function Project03() {
         <div className="flex-1 flex justify-center items-center">
           <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-green/20 bg-navy">
             <Image
-              src="https://img.icons8.com/?size=100&id=21746&format=png&color=000000"
+              // src="https://img.icons8.com/?size=100&id=21746&format=png&color=000000"
+               src="/project03/03main.png"
               alt="Line Icon"
               title="Line App Icon"
               width={256}

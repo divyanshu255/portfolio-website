@@ -199,7 +199,8 @@ export default function Home() {
         </h2>
         <hr className="border-t border-lightest-navy mb-10" />
         <ProjectCard
-          imgSrc="https://img.freepik.com/premium-vector/vector-illustration-two-people-casual-meeting-setting_844724-600.jpg"
+          // imgSrc="https://img.freepik.com/premium-vector/vector-illustration-two-people-casual-meeting-setting_844724-600.jpg"
+          imgSrc="/project01/01main.png"
           imgAlt="Bondly Screenshot"
           title="Bondly"
           description="A Social Media App where every thought finds a home and every image tells a story"
@@ -221,7 +222,8 @@ export default function Home() {
           accent="text-green-700"
         />
         <ProjectCard
-          imgSrc="https://img.icons8.com/?size=100&id=21746&format=png&color=000000"
+          // imgSrc="https://img.icons8.com/?size=100&id=21746&format=png&color=000000"
+          imgSrc="/project03/03main.png"
           imgAlt="line-me"
           title="Line"
           description="A real-time chat app that brings conversations to life. Stay connected, share moments instantly, and chat without limits — wherever you are."
