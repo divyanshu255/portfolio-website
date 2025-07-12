@@ -1,7 +1,6 @@
 
 "use client";
 
-import Image from "next/image";
 import {
   SiCplusplus,
   SiJavascript,
@@ -20,8 +19,10 @@ import {
   SiTailwindcss,
 } from 'react-icons/si';
 import { FaWind, FaBolt, FaGithub, FaExternalLinkAlt, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
 import React from 'react';
+import Image from "next/image";
 // CodeChef SVG icon
 const CodeChefIcon = () => (
   <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,18 +70,18 @@ export default function Home() {
             </svg>
           </div> */}
           {/* Navigation */}
-          <nav className="flex-1 flex justify-center gap-12 items-center text-lg font-mono text-lightest-slate">
-            <AnimatedNavLink href="#mail" index="01." text="Mail" setDropdownOpen={setDropdownOpen} dropdownOpen={dropdownOpen} />
-            <AnimatedNavLink href="#coding-platforms" index="02." text="Coding Platforms" setDropdownOpen={setDropdownOpen} dropdownOpen={dropdownOpen} />
-            <AnimatedNavLink href="#dev-platforms" index="03." text="Development Platforms" setDropdownOpen={setDropdownOpen} dropdownOpen={dropdownOpen} />
-            <AnimatedNavLink href="#other-links" index="04." text="Other Links" setDropdownOpen={setDropdownOpen} dropdownOpen={dropdownOpen} />
+          <nav className="flex-1 flex justify-center gap-8 md:gap-12 items-center text-lg md:text-lg font-mono text-lightest-slate whitespace-nowrap">
+            <AnimatedNavLink href="#mail" index="01." text="Mail" />
+            <AnimatedNavLink href="#coding-platforms" index="02." text="Coding Platforms" />
+            <AnimatedNavLink href="#dev-platforms" index="03." text="Development Platforms" />
+            <AnimatedNavLink href="#other-links" index="04." text="Other Links" />
           </nav>
-          <div className="flex items-center gap-6 ml-8">
+          <div className="flex flex-row items-center gap-3 md:gap-6 ml-4 md:ml-8 whitespace-nowrap">
             <a
               href="https://github.com/divyanshu255"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate hover:text-green text-3xl transition-transform duration-200 hover:scale-125"
+              className="text-slate hover:text-green text-2xl md:text-3xl transition-transform duration-200 hover:scale-125"
               aria-label="GitHub"
             >
               <FaGithub />
@@ -89,12 +90,21 @@ export default function Home() {
               href="https://www.linkedin.com/in/divyanshu-patel-6a9458227/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate hover:text-blue-400 text-3xl transition-transform duration-200 hover:scale-125"
+              className="text-slate hover:text-blue-400 text-2xl md:text-3xl transition-transform duration-200 hover:scale-125"
               aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>
-            <a href="#resume" className="bg-gradient-to-r from-green/80 via-blue-400/80 to-purple-500/80 border border-green text-green px-6 py-2 rounded transition font-mono text-base shadow-sm hover:bg-green hover:text-navy hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green/40 active:scale-95 duration-200">Resume</a>
+            <a
+              href="https://x.com/Divyanshupatel_?t=AWfOz9J5DmP__m_AgSDGRw&s=08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate hover:text-black text-2xl md:text-3xl transition-transform duration-200 hover:scale-125"
+              aria-label="X (Twitter)"
+            >
+              <FaXTwitter />
+            </a>
+            <a href="#resume" className="bg-gradient-to-r from-green/80 via-blue-400/80 to-purple-500/80 border border-green text-green px-4 md:px-6 py-2 rounded transition font-mono text-base shadow-sm hover:bg-green hover:text-navy hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green/40 active:scale-95 duration-200">Resume</a>
           </div>
         </div>
       </header>
@@ -259,7 +269,7 @@ export default function Home() {
 }
 
 // NAV LINK
-function AnimatedNavLink({ href, index, text, dropdownItems, setDropdownOpen, dropdownOpen }: { href: string; index: string; text: string; dropdownItems?: any[]; setDropdownOpen: (open: boolean) => void; dropdownOpen: boolean }) {
+function AnimatedNavLink({ href, index, text }: { href: string; index: string; text: string; }) {
   const [open, setOpen] = React.useState(false);
   // Emails for dropdown (for 01. Mail)
   const emails = [
@@ -296,8 +306,8 @@ function AnimatedNavLink({ href, index, text, dropdownItems, setDropdownOpen, dr
     <div
       className="relative group"
       style={{ zIndex: 50 }}
-      onMouseEnter={() => { setOpen(true); setDropdownOpen(true); }}
-      onMouseLeave={() => { setOpen(false); setHoveredIdx(null); setDropdownOpen(false); }}
+      onMouseEnter={() => { setOpen(true); }}
+      onMouseLeave={() => { setOpen(false); setHoveredIdx(null); }}
     >
       {/* Overlay for dimming background when dropdown is open */}
       {(text === 'Mail' || isCoding || isDev) && open && (
@@ -336,7 +346,7 @@ function AnimatedNavLink({ href, index, text, dropdownItems, setDropdownOpen, dr
               <button
                 className={`ml-4 px-3 py-1 rounded bg-green/10 text-green text-xs font-mono border border-green/30 opacity-0 group-hover/email:opacity-100 transition-opacity duration-200 ${hoveredIdx === idx ? 'opacity-100' : ''}`}
                 style={{ minWidth: 60 }}
-                onClick={e => { e.stopPropagation(); e.preventDefault(); handleCopy(email, idx); }}
+                onClick={() => { handleCopy(email, idx); }}
               >
                 {copiedIdx === idx ? 'Copied!' : 'Copy'}
               </button>
@@ -479,7 +489,7 @@ function ProjectCard({
     <div className={`flex  md:flex-row${reverse ? '-reverse' : ''} gap-8 items-center ${glassBg} rounded-3xl p-8 shadow-2xl w-full max-w-7xl mt-12 ${cardHover}`}>
       <div className="w-full md:w-1/2 flex-shrink-0">
         <div className="rounded-2xl overflow-hidden shadow-lg border-2 border-green/20">
-          <img src={imgSrc} alt={imgAlt} className="w-80 h-80 rounded-2xl shadow-md object-cover bg-navy transition-transform duration-300 hover:scale-105" />
+          <Image src={imgSrc} alt={imgAlt} width={320} height={320} className="w-80 h-80 rounded-2xl shadow-md object-cover bg-navy transition-transform duration-300 hover:scale-105" unoptimized={imgSrc.startsWith('http')} />
         </div>
       </div>
       <div className={`w-full md:w-1/2 flex flex-col gap-4 ${reverse ? "md:items-start text-left" : "md:items-end text-right"}`}>
