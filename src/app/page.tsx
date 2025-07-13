@@ -103,7 +103,7 @@ export default function Home() {
             >
               <FaXTwitter />
             </a>
-            <a href="#resume" className="bg-gradient-to-r from-green/80 via-blue-400/80 to-purple-500/80 border border-green text-green px-4 md:px-6 py-2 rounded transition font-mono text-base shadow-sm hover:bg-green hover:text-navy hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green/40 active:scale-95 duration-200">Resume</a>
+            <a href="https://drive.google.com/file/d/1kY2WxyyI10XQVrpMS0vIPRUWVQYkeUqz/view?usp=sharing" className="bg-gradient-to-r from-green/80 via-blue-400/80 to-purple-500/80 border border-green text-green px-4 md:px-6 py-2 rounded transition font-mono text-base shadow-sm hover:bg-green hover:text-navy hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green/40 active:scale-95 duration-200">Resume</a>
           </div>
         </div>
       </header>

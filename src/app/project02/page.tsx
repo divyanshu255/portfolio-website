@@ -53,7 +53,7 @@ export default function Project02() {
             Your Personal Recipe Planner. Plan meals effortlessly, discover new recipes, and save your favorites in one place. MealMuse helps you stay organized, eat better, and make cooking simple and enjoyable.
           </p>
           <a
-            href="#"
+            href="https://drive.google.com/file/d/1I9O1tsDlmRP8KUPBWS5Ygyqgxng0tbzK/view?usp=sharing"
             className="border border-green text-green px-8 py-3 rounded font-bold transition bg-gradient-to-r from-green/10 to-purple-500/10 hover:bg-green hover:text-navy hover:shadow-xl hover:scale-105 shadow-md"
           >
             Download .apk
