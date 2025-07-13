@@ -91,7 +91,7 @@ export default function Project03() {
           Links
         </h3>
         <div className="flex flex-row justify-start gap-16 w-full mb-10 items-start">
-          <LinkIcon label="Code" href="https://github.com/divyanshu255/chat-app1" icon={<FaGithub className="text-5xl text-white mt-6 mb-2" />} />
+          <LinkIcon label="Code" href="https://github.com/divyanshu255/chat-app-final" icon={<FaGithub className="text-5xl text-white mt-6 mb-2" />} />
           <Divider />
           <LinkIcon label="EAS" href="#" icon={<SiExpo className="text-5xl mt-6 mb-2" style={{ color: '#4630EB' }} />} />
           <Divider />
